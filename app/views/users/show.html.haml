@@ -1,9 +1,10 @@
 .center-content
-  - tweets.each do |tweet|
+  - @tweets.each do |tweet|
     .center-contents
       .content-upper
         .content-upper__name
-          = current_user.nickname
+          - if tweet.name.present?
+            = tweet.name
         .content-upper__time
           = format_posted_time(tweet.created_at)
         .content-upper__text
@@ -24,8 +25,3 @@
         %li.content-down__message
           = link_to '#' do
             %i.far.fa-envelope
-        %li.content-down__show
-          = link_to "詳細", tweet_path(tweet.id)
-        %li.content-down__delete
-          = link_to "削除", "/tweets/#{tweet.id}", method: :delete
-
