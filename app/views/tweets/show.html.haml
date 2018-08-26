@@ -1,0 +1,27 @@
+= render partial: 'header', locals: { tweets: @tweets }
+.maincontent
+  .center-content
+    .center-contents
+      .content-upper
+        .content-upper__name
+          = @tweet.user.nickname
+        .content-upper__time
+          = format_posted_time(@tweet.created_at)
+        .content-upper__text
+          - if @tweet.text.present?
+            = @tweet.text
+        .content-image
+          - if @tweet.image.present?
+            = image_tag @tweet.image
+      %ul.content-down
+        %li.content-down__comment
+          = link_to '#' do
+            %i.far.fa-comment
+        %li.content-down__retweet
+          = link_to '#' do
+            %i.fas.fa-retweet
+        %li.content-down__likes
+          = render 'likes/like_links', tweet: @tweet
+        %li.content-down__message
+          = link_to '#' do
+            %i.far.fa-envelope
