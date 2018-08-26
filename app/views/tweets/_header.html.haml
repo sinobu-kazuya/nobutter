@@ -31,3 +31,6 @@
       = link_to "ツイート", new_tweet_path
     %li.header-right--login
       = link_to "ログアウト", destroy_user_session_path, method: :delete
+    / %li.header-right--mypage
+    /   - tweets.each do |tweet|
+    /     = link_to "マイページ", user_path(tweet.id)
