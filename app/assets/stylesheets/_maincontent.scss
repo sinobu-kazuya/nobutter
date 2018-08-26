@@ -64,9 +64,10 @@
     .content-down{
       width: 50%;
       height: 30px;
-      padding: 0 100px 0 20px;
+      padding: 0 100px 3px 20px;
       display: flex;
       justify-content: space-around;
+      position: relative;
       &__comment{
 
       }
@@ -78,6 +79,26 @@
       }
       &__message{
 
+      }
+      &__show{
+        font-size: 16px;
+        border: 2px solid #DCDCDC;
+        padding: 2px 2px;
+        text-align: center;
+        border-radius: 8px 8px;
+        position: absolute;
+        bottom: 5px;
+        right: 40px;
+      }
+      &__delete{
+        font-size: 16px;
+        border: 2px solid #DCDCDC;
+        padding: 2px 2px;
+        text-align: center;
+        border-radius: 8px 8px;
+        position: absolute;
+        bottom: 5px;
+        right: -40px;
       }
     }
   }
@@ -96,4 +117,8 @@
       background-color: $white;
     }
   }
+}
+
+.fas.fa-heart{
+  color: #FF0000;
 }
