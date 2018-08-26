@@ -1,0 +1,15 @@
+= render partial: 'header'
+.postform
+  .postforms
+    .postforms-header
+      ツイートする
+    .postforms-content
+      = form_for [@tweet] do |f|
+        .field-label__text
+        = f.text_field :name, placeholder: "名前を入力してね", type: "text", class: 'postforms-content--name'
+        = f.text_area :text, placeholder: "いまどうしてる？", type: "text", class: 'postforms-content--input'
+        .image-box
+          %label.fas.fa-image.fa-3x
+            = f.file_field :image, class: 'postforms-content--image', style: 'display: none;'
+        = f.submit "ツイート", class: 'postforms-content--btn'
+

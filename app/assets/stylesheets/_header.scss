@@ -1,0 +1,98 @@
+.header{
+  width: 100vw;
+  height: 10vh;
+  background-color: $white;
+  filter: drop-shadow(2px 2px 4px #000);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+   z-index: 20;
+  .header-left{
+    padding-left: 200px;
+    height: 10vh;
+    width: 25vw;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    &--home{
+      color: $black;
+      text-align: center;
+      line-height: 10vh;
+    }
+    &--moment{
+      color: $fontcolor;
+      text-align: center;
+      line-height: 10vh;
+    }
+    &--notice{
+      color: $black;
+      text-align: center;
+      line-height: 10vh;
+    }
+    &--message{
+      color: $fontcolor;
+      text-align: center;
+      line-height: 10vh;
+    }
+    &--space{
+      color: $fontcolor;
+    }
+  }
+  .header-right{
+    padding-right: 200px;
+    height: 10vh;
+    width: 40vw;
+    list-style: none;
+    display: flex;
+    align-items: right;
+    justify-content: space-around;
+      &--mark{
+      color: $black;
+      text-align: center;
+      line-height: 10vh;
+      }
+      &--keyword{
+      color: $fontcolor;
+      text-align: center;
+      line-height: 10vh;
+      position: relative;
+      #search{
+        border-radius: 8px 8px;
+      }
+      .search{
+        display: none;
+      }
+      .fab.fa-sistrix{
+        color: $black;
+        position: absolute;
+        bottom: 39px;
+        right: 9px;
+      }
+      }
+      &--icon{
+      color: $black;
+      text-align: center;
+      line-height: 10vh;
+      }
+      &--post{
+      color: $fontcolor;
+      text-align: center;
+      background-color: $background;
+      padding: 10px;
+      width: 100px;
+      margin: 20px 0;
+      border-radius: 100px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: none;
+      line-height: 34px;
+      filter: drop-shadow(2px 2px 4px #000);
+      }
+      &--login{
+      color: $black;
+      text-align: center;
+      line-height: 10vh;
+      }
+  }
+}

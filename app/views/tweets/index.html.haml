@@ -1,0 +1,10 @@
+.wrapper
+= render partial: 'header'
+.maincontent
+  .left-content
+    .left-content-up
+    .left-content-down
+  = render partial: 'center-content', locals: { tweets: @tweets }
+  .right-content
+    .right-content-up
+    .right-content-down

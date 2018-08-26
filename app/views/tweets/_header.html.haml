@@ -1,0 +1,33 @@
+.header
+  %ul.header-left
+    %li.header-left--home
+      = link_to '#' do
+        %i.fab.fa-houzz
+          ホーム
+    %li.header-left--moment
+      = link_to '#' do
+        %i.fab.fa-earlybirds
+          モーメント
+    %li.header-left--notice
+      = link_to '#' do
+        %i.far.fa-bell
+          通知
+    %li.header-left--message
+      = link_to '#' do
+        %i.far.fa-envelope
+          メッセージ
+  %ul.header-right
+    %li.header-right--mark
+      = link_to root_path do
+        %i.fab.fa-twitter.fa-lg
+    %li.header-right--keyword
+      = form_tag root_path, method: :get do
+        = text_field_tag :search
+        %label.fab.fa-sistrix
+          = submit_tag "Search", class: "search"
+    %li.header-right--icon
+      icon
+    %li.header-right--post
+      = link_to "ツイート", new_tweet_path
+    %li.header-right--login
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
