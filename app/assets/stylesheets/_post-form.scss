@@ -4,7 +4,7 @@
   height: 100vh;
   .postforms{
     width: 700px;
-    height: 400px;
+    height: 500px;
     margin: 0 auto;
     background-color: $maincolor;
     margin-top: 12vh;
@@ -14,29 +14,22 @@
     position: relative;
     &-header{
       width: 700px;
-      height: 100px;
+      height: 130px;
       background-color: $white;
       border-radius: 30px 30px 0 0;
       border-bottom: 1px solid #1DA1F2;
       font-size: 20px;
       font-weight: bold;
       text-align: center;
-      line-height: 100px;
+      line-height: 130px;
     }
     &-content{
       padding: 0 20px;
-      margin-top: 50px;
-      &--name{
-        width: 250px;
-        height: 30px;
-        margin: 0 80px;
-        box-shadow: none;
-        margin-bottom: 10px;
-      }
+      margin-top: 10px;
       &--input{
         width: 500px;
-        height: 150px;
-        margin: 0 80px;
+        height: 180px;
+        margin: 30px 80px;
         box-shadow: none;
         word-break: normal;
         word-wrap: break-word;
@@ -54,20 +47,26 @@
         box-shadow: none;
         line-height: 34px;
         position: absolute;
-        right: 15px;
-        bottom: 3px;
+        right: 40px;
+        bottom: 20px;
       }
       .image-box{
+        width: 150px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
       .fas.fa-image{
         position: absolute;
-        left: 35px;
+        left: 47px;
         bottom: 25px;
         }
-        .imagesize{
-          width: 120px;
+        .image-box{
+          width: 150px;
           position: absolute;
-          bottom: -10px;
-          left: -25px;
+          bottom: -25px;
+          left: -45px;
         }
       }
     }
