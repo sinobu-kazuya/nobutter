@@ -3,8 +3,7 @@
     .center-contents
       .content-upper
         .content-upper__name
-          - if tweet.name.present?
-            = tweet.name
+          = current_user.nickname
         .content-upper__time
           = format_posted_time(tweet.created_at)
         .content-upper__text
@@ -21,9 +20,12 @@
           = link_to '#' do
             %i.fas.fa-retweet
         %li.content-down__likes
-          = link_to '#' do
-            %i.far.fa-heart
+          = render 'likes/like_links', tweet: tweet
         %li.content-down__message
           = link_to '#' do
             %i.far.fa-envelope
+        %li.content-down__show
+          = link_to "詳細", tweet_path(tweet.id)
+        %li.content-down__delete
+          = link_to "削除", "/tweets/#{tweet.id}", method: :delete
 
