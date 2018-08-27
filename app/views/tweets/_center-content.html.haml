@@ -3,7 +3,7 @@
     .center-contents
       .content-upper
         .content-upper__name
-          = current_user.nickname
+          = tweet.user.nickname
         .content-upper__time
           = format_posted_time(tweet.created_at)
         .content-upper__text
@@ -14,7 +14,7 @@
             = image_tag tweet.image
       %ul.content-down
         %li.content-down__comment
-          = link_to '#' do
+          = link_to tweet_path(tweet.id) do
             %i.far.fa-comment
         %li.content-down__retweet
           = link_to '#' do

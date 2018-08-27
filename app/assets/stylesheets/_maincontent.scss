@@ -35,7 +35,7 @@
       .content-upper{
         padding: 10px 10px 0 40px;
         height: 100%;
-        width: 100%;
+        width: 90%;
         overflow-y: scroll;
         &__name{
           height: 30px;
@@ -102,6 +102,70 @@
       }
     }
   }
+    .content-comment{
+      width: 600px;
+      height: 130px;
+      margin: 0 auto;
+      background-color: $maincolor;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      .commentform{
+        padding: 0 20px;
+        margin-top: 10px;
+        &__input{
+          width: 500px;
+          height: 50px;
+          margin: 20px 50px;
+          word-wrap: break-word;
+        }
+        &__btn{
+          color: $fontcolor;
+        text-align: center;
+        background-color: $background;
+        border-radius: 30px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: none;
+        line-height: 50px;
+        position: absolute;
+        right: 50px;
+        bottom: 5px;
+        width: 500px;
+        height: 50px;
+        }
+      }
+    }
+    .comment-show{
+      background-color: $white;
+      width: 600px;
+      position: relative;
+      margin-bottom: 5px;
+      .comment-showbox{
+        padding: 10px 10px 0 40px;
+        height: 100%;
+        width: 90%;
+        overflow-y: scroll;
+        .comment-forname{
+          height: 30px;
+        }
+        .comment-nickname{
+          height: 30px;
+          float: left;
+        }
+        .comment-time{
+          margin-left: 5px;
+          height: 30px;
+          float: left;
+        }
+        .comment-text{
+          content: "";
+          clear: both;
+          display: block;
+          width: 580px;
+        }
+      }
+    }
   .right-content{
     width: 350px;
     height: 700px;
