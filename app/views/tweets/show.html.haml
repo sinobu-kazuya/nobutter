@@ -15,7 +15,7 @@
             = image_tag @tweet.image
       %ul.content-down
         %li.content-down__comment
-          = link_to '#' do
+          = link_to tweet_path(@tweet.id) do
             %i.far.fa-comment
         %li.content-down__retweet
           = link_to '#' do
@@ -25,3 +25,36 @@
         %li.content-down__message
           = link_to '#' do
             %i.far.fa-envelope
+    -if user_signed_in?
+      .content-comment
+        .commentforms
+        = form_for [@tweet, @comment] do |f|
+          .field-label__text
+          = f.text_area :text, placeholder: "返信をツイート", type: "text", class: 'commentform__input'
+          = f.submit "返信", class: 'commentform__btn'
+    -if @comments
+      .comment-show
+        .comment-showbox
+          - @comments.each do |comment|
+            .comment-forname
+              =@tweet.user.nickname
+              さんへのコメント
+            .comment-nickname
+              =comment.user.nickname
+            .comment-time
+              =format_posted_time(comment.created_at)
+            .comment-text
+              =comment.text
+        %ul.content-down
+          %li.content-down__comment
+            = link_to tweet_path(@tweet.id) do
+              %i.far.fa-comment
+          %li.content-down__retweet
+            = link_to '#' do
+              %i.fas.fa-retweet
+          / %li.content-down__likes
+          /   = render 'likes/like_links', tweet: @tweet
+          %li.content-down__message
+            = link_to '#' do
+              %i.far.fa-envelope
+
