@@ -1,7 +1,7 @@
 .header
   %ul.header-left
     %li.header-left--home
-      = link_to '#' do
+      = link_to root_path do
         %i.fab.fa-houzz
           ホーム
     %li.header-left--moment
@@ -26,7 +26,12 @@
         %label.fab.fa-sistrix
           = submit_tag "Search", class: "search"
     %li.header-right--icon
-      icon
+      %dl#accordion
+        %dt
+          %a{href: "#"} icon
+        %dd
+          = link_to "マイページ", user_path(current_user.id)
+
     %li.header-right--post
       = link_to "ツイート", new_tweet_path
     %li.header-right--login
