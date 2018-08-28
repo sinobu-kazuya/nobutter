@@ -15,7 +15,7 @@
             = image_tag @tweet.image
       %ul.content-down
         %li.content-down__comment
-          = link_to tweet_path(@tweet.id) do
+          = link_to '#' do
             %i.far.fa-comment
         %li.content-down__retweet
           = link_to '#' do
@@ -45,16 +45,16 @@
               =format_posted_time(comment.created_at)
             .comment-text
               =comment.text
-        %ul.content-down
-          %li.content-down__comment
-            = link_to tweet_path(@tweet.id) do
-              %i.far.fa-comment
-          %li.content-down__retweet
-            = link_to '#' do
-              %i.fas.fa-retweet
-          / %li.content-down__likes
-          /   = render 'likes/like_links', tweet: @tweet
-          %li.content-down__message
-            = link_to '#' do
-              %i.far.fa-envelope
+        / %ul.content-down
+        /   %li.content-down__comment
+        /     = link_to tweet_path(@tweet.id) do
+        /       %i.far.fa-comment
+        /   %li.content-down__retweet
+        /     = link_to '#' do
+        /       %i.fas.fa-retweet
+        /   / %li.content-down__likes
+        /   /   = render 'likes/like_links', tweet: @tweet
+        /   %li.content-down__message
+        /     = link_to '#' do
+        /       %i.far.fa-envelope
 

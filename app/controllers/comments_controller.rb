@@ -3,7 +3,12 @@ class CommentsController < ApplicationController
   def create
     @tweet = Tweet.find(comment_params[:tweet_id])
     @user = User.find(comment_params[:user_id])
-    Comment.create(comment_params)
+    @comment =Comment.create(comment_params)
+    redirect_to "/tweets/#{@comment.tweet.id}"
+  end
+
+  def destroy
+    co
   end
 
   private
