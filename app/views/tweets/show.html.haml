@@ -36,6 +36,9 @@
       .comment-show
         .comment-showbox
           - @comments.each do |comment|
+            - if comment.user == current_user
+              .comment-delete
+                = link_to "削除", tweet_comment_path(comment.tweet_id, comment.id), method: :delete
             .comment-forname
               =@tweet.user.nickname
               さんへのコメント
