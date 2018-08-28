@@ -1,6 +1,6 @@
 .maincontent{
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   background-color: $fontcolor;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@
     height: 700px;
     &-up{
       width: 300px;
-      height: 100px;
+      height: 300px;
       background-color: $white;
       margin-bottom: 20px;
     }
@@ -32,11 +32,12 @@
       width: 600px;
       position: relative;
       margin-bottom: 5px;
+      overflow-y: scroll;
       .content-upper{
+        height: calc(100vh - 15%);
         padding: 10px 10px 0 40px;
         height: 100%;
         width: 90%;
-        overflow-y: scroll;
         &__name{
           height: 30px;
           float: left;
@@ -103,6 +104,7 @@
     }
   }
     .content-comment{
+      margin-bottom: 10px;
       width: 600px;
       height: 130px;
       margin: 0 auto;
@@ -137,32 +139,37 @@
       }
     }
     .comment-show{
+      margin-top: 5px;
       background-color: $white;
       width: 600px;
       position: relative;
-      margin-bottom: 5px;
+      filter: drop-shadow(1px 1px 1px #000);
       .comment-showbox{
-        padding: 10px 10px 0 40px;
         height: 100%;
-        width: 90%;
+        width: 100%;
         overflow-y: scroll;
         .comment-forname{
           height: 30px;
+          padding:15px 0 0 40px;
         }
         .comment-nickname{
           height: 30px;
           float: left;
+          padding: 2px 0 0 40px;
         }
         .comment-time{
           margin-left: 5px;
           height: 30px;
           float: left;
+          padding: 2px 0 0 40px;
         }
         .comment-text{
           content: "";
           clear: both;
           display: block;
-          width: 580px;
+          width: 560px;
+          padding: 2px 0 15px 40px;
+          border-bottom: 3px ridge #000080;
         }
       }
     }
