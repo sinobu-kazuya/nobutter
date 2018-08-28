@@ -4,11 +4,18 @@ class CommentsController < ApplicationController
     @tweet = Tweet.find(comment_params[:tweet_id])
     @user = User.find(comment_params[:user_id])
     @comment =Comment.create(comment_params)
-    redirect_to "/tweets/#{@comment.tweet.id}"
+    # redirect_to "/tweets/#{@comment.tweet.id}"
+    respond_to do |format|
+      format.html { redirect_to tweet_path(params[:tweet_id])}
+      format.json
+    end
   end
 
   def destroy
-    co
+    @comment = Comment.find(params[:id]) #⑤
+    if @comment.destroy
+      redirect_to "/tweets/#{@comment.tweet.id}"
+    end
   end
 
   private
