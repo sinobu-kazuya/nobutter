@@ -22,7 +22,7 @@
   }
   .center-content{
     width: 600px;
-    height: 100vh;
+    // height: 100vh;
     padding: 0 20px;
     margin-top: 250px;
     z-index: 10;
@@ -148,9 +148,14 @@
         height: 100%;
         width: 100%;
         overflow-y: scroll;
+        .comment-delete{
+          height: 10px;
+          padding:15px 20px 0 40px;
+          text-align: right;
+        }
         .comment-forname{
           height: 30px;
-          padding:15px 0 0 40px;
+          padding:2px 0 0 40px;
         }
         .comment-nickname{
           height: 30px;
