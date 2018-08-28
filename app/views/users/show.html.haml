@@ -1,4 +1,5 @@
 = render partial: 'tweets/header', locals: { tweets: @tweets }
+= render partial: 'users/mypage'
 .maincontent
   .center-content
     - @tweets.each do |tweet|
