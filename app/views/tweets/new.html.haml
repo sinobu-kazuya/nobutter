@@ -7,8 +7,7 @@
       = form_for [@tweet] do |f|
         .field-label__text
         = f.text_area :text, placeholder: "いまどうしてる？", type: "text", class: 'postforms-content--input'
-        .image-box
-          %label.fas.fa-image.fa-3x
-            = f.file_field :image, class: 'postforms-content--image', style: 'display: none;'
+        %label.fas.fa-image.fa-3x
+          = f.file_field :image, class: 'postforms-content--image', style: 'display: none;'
         = f.submit "ツイート", class: 'postforms-content--btn'
 
