@@ -1,6 +1,7 @@
 .mypage
   .mypage-image
-    =image_tag current_user.image_url
+    - if current_user.image?
+      =image_tag current_user.image_url
   .mypage-lists
     %ul.mypage-list
       %li.mypage-list__tweet

@@ -4,10 +4,11 @@
   .left-content
     .left-content-up
       .left-content_image
-        =image_tag current_user.image_url
+        - if current_user.image?
+          =image_tag current_user.image_url
       .left-contents
         .left-contents_name
-          current_user.name
+          = current_user.name
         .left-contents_nickname
           = current_user.nickname
         %ul.left-contents_list
