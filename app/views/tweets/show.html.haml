@@ -1,13 +1,13 @@
 = render partial: 'header', locals: { tweets: @tweets }
-.maincontent
-  .center-content
-    .center-contents
-      .content-upper
-        .content-upper__name
+.commentcontent
+  .center_content
+    .center_contents
+      .content_upper
+        .content_upper__name
           = @tweet.user.nickname
-        .content-upper__time
+        .content_upper__time
           = format_posted_time(@tweet.created_at)
-        .content-upper__text
+        .content_upper__text
           - if @tweet.text.present?
             = @tweet.text
         .content-image
@@ -25,7 +25,7 @@
         %li.content-down__message
           = link_to '#' do
             %i.far.fa-envelope
-    -if user_signed_in?
+    -unless user_signed_in? && current_user.id == @tweet.user_id
       .content-comment
         .commentforms
         = form_for [@tweet, @comment] do |f|

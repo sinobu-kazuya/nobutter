@@ -3,6 +3,21 @@
 .maincontent
   .left-content
     .left-content-up
+      .left-content_image
+        =image_tag current_user.image_url
+      .left-contents
+        .left-contents_name
+          current_user.name
+        .left-contents_nickname
+          = current_user.nickname
+        %ul.left-contents_list
+          %li.left-contents_list_tweet
+            = link_to "ツイート数", user_path(current_user.id)
+            = current_user.tweets.count
+          %li.left-contents_list_follow
+            follow
+          %li.left-contents_list_follower
+            follower
     .left-content-down
   = render partial: 'center-content', locals: { tweets: @tweets }
   .right-content

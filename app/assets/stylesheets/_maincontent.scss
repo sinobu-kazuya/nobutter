@@ -1,33 +1,83 @@
 .maincontent{
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 10vh);
+  padding-top: 15vh;
   background-color: $fontcolor;
   display: flex;
-  align-items: center;
   justify-content: center;
   .left-content{
     width: 300px;
     height: 700px;
     &-up{
+      filter: drop-shadow(1px 1px 1px #000);
       width: 300px;
-      height: 300px;
+      height: 350px;
       background-color: $white;
       margin-bottom: 20px;
+      .left-content_image{
+        width: 300px;
+        height:200px;
+        img{
+          width: 300px;
+          height: 200px;
+        }
+      }
+      .left-contents{
+        &_name{
+          width: 180px;
+          height:40px;
+          padding: 2px;
+          float: right;
+          line-height: 60px;
+          text-align: left;
+        }
+        &_nickname{
+          width: 180px;
+          height:20px;
+          padding: 2px;
+          float: right;
+        }
+        .left-contents_list{
+          clear: both;
+          display: flex;
+          justify-content:space-around;
+          padding: 5px;
+          &_tweet{
+            width: 90px;
+            height: 60px;
+            font-size: 14px;
+            line-height: 60px;
+          }
+          &_follow{
+            width: 60px;
+            height: 60px;
+            font-size: 14px;
+            line-height: 60px;
+          }
+          &_follower{
+            width: 60px;
+            height: 60px;
+            font-size: 14px;
+            line-height: 60px;
+          }
+        }
+
+      }
     }
     &-down{
+      filter: drop-shadow(1px 1px 1px #000);
       width: 300px;
-      height: 500px;
+      height: 350px;
       background-color: $white;
     }
   }
   .center-content{
     width: 600px;
-    // height: 100vh;
-    padding: 0 20px;
-    margin-top: 250px;
+    padding: 0px 20px 0 20px;
     z-index: 10;
     position: relative;
     .center-contents{
+      filter: drop-shadow(1px 1px 1px #000);
       background-color: $white;
       width: 600px;
       position: relative;
@@ -103,91 +153,18 @@
       }
     }
   }
-    .content-comment{
-      margin-bottom: 10px;
-      width: 600px;
-      height: 130px;
-      margin: 0 auto;
-      background-color: $maincolor;
-      border-radius: 30px;
-      cursor: pointer;
-      position: relative;
-      .commentform{
-        padding: 0 20px;
-        margin-top: 10px;
-        &__input{
-          width: 500px;
-          height: 50px;
-          margin: 20px 50px;
-          word-wrap: break-word;
-        }
-        &__btn{
-          color: $fontcolor;
-        text-align: center;
-        background-color: $background;
-        border-radius: 30px 30px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: none;
-        line-height: 50px;
-        position: absolute;
-        right: 50px;
-        bottom: 5px;
-        width: 500px;
-        height: 50px;
-        }
-      }
-    }
-    .comment-show{
-      margin-top: 5px;
-      background-color: $white;
-      width: 600px;
-      position: relative;
-      filter: drop-shadow(1px 1px 1px #000);
-      .comment-showbox{
-        height: 100%;
-        width: 100%;
-        overflow-y: scroll;
-        .comment-delete{
-          height: 10px;
-          padding:15px 20px 0 40px;
-          text-align: right;
-        }
-        .comment-forname{
-          height: 30px;
-          padding:2px 0 0 40px;
-        }
-        .comment-nickname{
-          height: 30px;
-          float: left;
-          padding: 2px 0 0 40px;
-        }
-        .comment-time{
-          margin-left: 5px;
-          height: 30px;
-          float: left;
-          padding: 2px 0 0 40px;
-        }
-        .comment-text{
-          content: "";
-          clear: both;
-          display: block;
-          width: 560px;
-          padding: 2px 0 15px 40px;
-          border-bottom: 3px ridge #000080;
-        }
-      }
-    }
   .right-content{
     width: 350px;
     height: 700px;
     &-up{
+      filter: drop-shadow(1px 1px 1px #000);
       width: 350px;
       height: 200px;
       background-color: $white;
       margin-bottom: 20px;
     }
     &-down{
+      filter: drop-shadow(1px 1px 1px #000);
       width: 350px;
       height: 200px;
       background-color: $white;

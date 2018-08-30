@@ -50,13 +50,14 @@
         right: 40px;
         bottom: 20px;
       }
-      .image-box{
+      .image-review{
         width: 150px;
         height: 100px;
         background-color: white;
         position: absolute;
         left: 20px;
         bottom: 30px;
+        object-fit: cover;
       .fas.fa-image{
         position: absolute;
         left: 47px;

@@ -1,0 +1,146 @@
+.commentcontent{
+  width: 100vw;
+  height: calc(100vh - 10vh);
+  padding-top: 10vh;
+  background-color: $fontcolor;
+  .center_content{
+    width: 600px;
+    margin : 0 auto;
+    margin-top: 100px;
+    padding: 0 20px;
+    z-index: 10;
+    position: relative;
+    .center_contents{
+      filter: drop-shadow(1px 1px 1px #000);
+      background-color: $white;
+      width: 600px;
+      position: relative;
+      margin-bottom: 5px;
+      overflow-y: scroll;
+      .content_upper{
+        height: calc(100vh - 15%);
+        padding: 10px 10px 0 40px;
+        height: 100%;
+        width: 90%;
+        .content_upper__name{
+          height: 30px;
+          float: left;
+        }
+        .content_upper__time{
+          margin-left: 5px;
+          height: 30px;
+          float: left;
+        }
+        .content_upper__text{
+          content: "";
+          clear: both;
+          display: block;
+          width: 580px;
+        }
+        .img{
+          margin: 0 auto;
+          width:auto;
+          height:auto;
+          max-width:50%;
+          max-height:50%;
+        }
+      }
+    }
+    .content-down{
+      width: 50%;
+      height: 30px;
+      padding: 0 100px 3px 20px;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      &__comment{
+
+      }
+      &__retweet{
+
+      }
+      &__likes{
+
+      }
+      &__message{
+
+      }
+    }
+  }
+  .content-comment{
+    filter: drop-shadow(1px 1px 1px #000);
+    margin-bottom: 10px;
+    width: 600px;
+    height: 130px;
+    margin: 0 auto;
+    background-color: $maincolor;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    .commentform{
+      padding: 0 20px;
+      margin-top: 10px;
+      &__input{
+        width: 500px;
+        height: 50px;
+        margin: 20px 50px;
+        word-wrap: break-word;
+      }
+      &__btn{
+        color: $fontcolor;
+        text-align: center;
+        background-color: $background;
+        border-radius: 30px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: none;
+        line-height: 50px;
+        position: absolute;
+        right: 50px;
+        bottom: 5px;
+        width: 500px;
+        height: 50px;
+      }
+    }
+  }
+  .comment-show{
+    margin-top: 5px;
+    background-color: $white;
+    width: 600px;
+    position: relative;
+    filter: drop-shadow(1px 1px 1px #000);
+    .comment-showbox{
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+      .comment-delete{
+        height: 10px;
+        padding:15px 20px 0 40px;
+        text-align: right;
+      }
+      .comment-forname{
+        height: 30px;
+        padding:2px 0 0 40px;
+      }
+      .comment-nickname{
+        height: 30px;
+        float: left;
+        padding: 2px 0 0 40px;
+      }
+      .comment-time{
+        margin-left: 5px;
+        height: 30px;
+        float: left;
+        padding: 2px 0 0 40px;
+      }
+      .comment-text{
+        content: "";
+        clear: both;
+        display: block;
+        width: 560px;
+        padding: 2px 0 15px 40px;
+        border-bottom: 3px ridge #000080;
+      }
+    }
+  }
+}

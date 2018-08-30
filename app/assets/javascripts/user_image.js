@@ -1,8 +1,8 @@
 $(function() {
-  $('#tweet_image').after('<span></span>');
+  $('#user_image').after('<span></span>');
 
   // アップロードするファイルを選択
-  $('#tweet_image').change(function(e) {
+  $('#user_image').change(function(e) {
     var file = $(this).prop('files')[0];
 
     // 画像以外は処理を停止
@@ -16,7 +16,7 @@ $(function() {
     // 画像表示
     var reader = new FileReader();
     reader.onload = function() {
-      var img_src = $('<img class= image-review >').attr('src', reader.result);
+      var img_src = $('<img class= user_review >').attr('src', reader.result);
       $(e.target).next().html(img_src);
     }
     reader.readAsDataURL(file);

@@ -1,0 +1,12 @@
+.user
+  .user_edit
+    現在の画像
+    = form_for(@user) do |f|
+      - if @user.image?
+        = image_tag @user.image.url
+      - else
+        = image_tag("/images/icon/no-image.png")
+      .user_edit-image
+      = f.file_field :image
+      = f.hidden_field :user_id, value: current_user.id
+      = f.submit 'プロフィール編集を完了する', class: 'btn-primary'
