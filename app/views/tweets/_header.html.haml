@@ -1,25 +1,26 @@
 .header
+  %i.fab.fa-jenkins.fa-3x
   %ul.header-left
     %li.header-left--home
       = link_to root_path do
-        %i.fab.fa-houzz
+        %i.fab.fa-houzz.faa-float.animated-hover
           ホーム
     %li.header-left--moment
       = link_to '#' do
-        %i.fab.fa-earlybirds
+        %i.fab.fa-earlybirds.faa-float.animated-hover
           モーメント
     %li.header-left--notice
       = link_to '#' do
-        %i.far.fa-bell
+        %i.far.fa-bell.faa-float.animated-hover
           通知
     %li.header-left--message
       = link_to '#' do
-        %i.far.fa-envelope
+        %i.far.fa-envelope.faa-float.animated-hover
           メッセージ
   %ul.header-right
     %li.header-right--mark
       = link_to root_path do
-        %i.fab.fa-twitter.fa-lg
+        %i.fab.fa-twitter.fa-lg.faa-wrench.animated-hover.fa-2x
     %li.header-right--keyword
       = form_tag root_path, method: :get do
         = text_field_tag :search
