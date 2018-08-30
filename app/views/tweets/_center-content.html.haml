@@ -1,6 +1,6 @@
 .center-content
   - tweets.each do |tweet|
-    .center-contents
+    #tweets.center-contents
       .content-upper
         .content-upper__name
           = tweet.user.nickname
@@ -26,6 +26,7 @@
             %i.far.fa-envelope
         %li.content-down__show
           = link_to "詳細", tweet_path(tweet.id)
-        %li.content-down__delete
-          = link_to "削除", "/tweets/#{tweet.id}", method: :delete
-
+        -if user_signed_in? && current_user.id == tweet.user_id
+          %li.content-down__delete
+            = link_to "削除", "/tweets/#{tweet.id}", method: :delete
+  = paginate @tweets
