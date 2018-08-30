@@ -1,10 +1,20 @@
 .mypage{
+  padding-top: 10vh;
   width: 100vw;
   height: 600px;
   .mypage-image{
     width: 100%;
     height:540px;
     background-color: yellow;
+    position: relative;
+    img{
+      margin: auto 0;
+      width: 720px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 460px;
+    }
   }
   .mypage-lists{
     width: 100%;
@@ -14,7 +24,7 @@
     .mypage-list{
       display: flex;
       justify-content: space-around;
-      padding:5px 400px 5px 200px;
+      padding:5px 200px 5px 200px;
       height: 50px;
       line-height: 50px;
       &__tweet{
@@ -41,4 +51,73 @@
       }
     }
   }
+}
+.mypagecontent{
+width: 100vw;
+height: calc(100vh - 10vh);
+padding-top: 10vh;
+background-color: $fontcolor;
+  .mypage_content{
+  width: 600px;
+  margin : 0 auto;
+  padding: 0 20px;
+  z-index: 10;
+  position: relative;
+    .mypage_contents{
+    filter: drop-shadow(1px 1px 1px #000);
+    background-color: $white;
+    width: 600px;
+    position: relative;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+      .mypage_upper{
+      height: calc(100vh - 15%);
+      padding: 10px 10px 0 40px;
+      height: 100%;
+      width: 90%;
+        &__name{
+        height: 30px;
+        float: left;
+        }
+        &__time{
+        margin-left: 5px;
+        height: 30px;
+        float: left;
+        }
+        &__text{
+        content: "";
+        clear: both;
+        display: block;
+        width: 580px;
+        }
+        .img{
+        margin: 0 auto;
+        width:auto;
+        height:auto;
+        max-width:50%;
+        max-height:50%;
+        }
+      }
+    }
+  .mypage-down{
+    width: 50%;
+    height: 30px;
+    padding: 0 100px 3px 20px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    &__comment{
+
+    }
+    &__retweet{
+
+    }
+    &__likes{
+
+    }
+    &__message{
+
+    }
+  }
+}
 }
