@@ -1,9 +1,11 @@
 .mypage
   .mypage-image
+    =image_tag current_user.image_url
   .mypage-lists
     %ul.mypage-list
       %li.mypage-list__tweet
-        tweet
+        = link_to "ツイート数", user_path(current_user.id)
+        =current_user.tweets.count
       %li.mypage-list__follow
         follow
       %li.mypage-list__follower
@@ -12,4 +14,4 @@
         likes
     %ul.mypage-btn
       .mypage-btn__edit
-        プロフィールを編集
+        = link_to "プロフィールを編集", edit_user_path(current_user.id)

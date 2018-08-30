@@ -1,30 +1,33 @@
 = render partial: 'tweets/header', locals: { tweets: @tweets }
-= render partial: 'users/mypage'
-.maincontent
-  .center-content
+= render partial: 'users/mypage', locals: { user: @user }
+.mypagecontent
+  .mypage_content
     - @tweets.each do |tweet|
-      .center-contents
-        .content-upper
-          .content-upper__name
+      .mypage_contents
+        .mypage_upper
+          .mypage_upper__name
             - if tweet.name.present?
               = tweet.name
-          .content-upper__time
+          .mypage_upper__time
             = format_posted_time(tweet.created_at)
-          .content-upper__text
+          .mypage_upper__text
             - if tweet.text.present?
               = tweet.text
-          .content-image
+          .mypage-image
             - if tweet.image.present?
               = image_tag tweet.image
-        %ul.content-down
-          %li.content-down__comment
+        %ul.mypage-down
+          %li.mypage-down__comment
             = link_to '#' do
               %i.far.fa-comment
-          %li.content-down__retweet
+          %li.mypage-down__retweet
             = link_to '#' do
               %i.fas.fa-retweet
-          %li.content-down__likes
+          %li.mypage-down__likes
             = render 'likes/like_links', tweet: tweet
-          %li.content-down__message
+          %li.mypage-down__message
             = link_to '#' do
               %i.far.fa-envelope
+          -if user_signed_in? && current_user.id == tweet.user_id
+            %li.content-down__delete
+              = link_to "削除", "/tweets/#{tweet.id}", method: :delete
