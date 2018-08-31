@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
   include CarrierWave::MiniMagick
 
-  process :resize_to_limit => [1500, 540]
+  process :resize_to_limit => [720, 540]
 
   # 保存形式をJPGにする
   process :convert => 'jpg'

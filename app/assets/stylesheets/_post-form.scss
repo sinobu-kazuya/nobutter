@@ -26,14 +26,35 @@
     &-content{
       padding: 0 20px;
       margin-top: 10px;
+      position: relative;
+      &--icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        float: left;
+        border: 3px solid white;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        img{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+      }
       &--input{
         width: 500px;
         height: 180px;
-        margin: 30px 80px;
+        margin: 40px 80px;
         box-shadow: none;
         word-break: normal;
         word-wrap: break-word;
       }
+      .fas.fa-image{
+        position: absolute;
+        left: 50px;
+        bottom: -50px;
+        }
       &--btn{
         // filter: drop-shadow(1px 1px 3px #000);
         color: $fontcolor;
@@ -48,21 +69,15 @@
         line-height: 34px;
         position: absolute;
         right: 40px;
-        bottom: 20px;
+        bottom: -70px;
       }
       .image-review{
         width: 150px;
         height: 100px;
         background-color: white;
         position: absolute;
-        left: 20px;
-        bottom: 30px;
-        object-fit: cover;
-      .fas.fa-image{
-        position: absolute;
-        left: 47px;
-        bottom: 25px;
-        }
+        left: -40px;
+        bottom: -20px;
         .image-box{
           width: 150px;
           position: absolute;
