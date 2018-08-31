@@ -4,10 +4,12 @@
     .postforms-header
       ツイートする
     .postforms-content
+      .postforms-content--icon
+        - if current_user.avatar?
+          = image_tag current_user.avatar.url
       = form_for [@tweet] do |f|
         .field-label__text
         = f.text_area :text, placeholder: "いまどうしてる？", type: "text", class: 'postforms-content--input'
-        %label.fas.fa-image.fa-3x
+        %label.fas.fa-image.fa-3x.btn
           = f.file_field :image, class: 'postforms-content--image', style: 'display: none;'
         = f.submit "ツイート", class: 'postforms-content--btn'
-

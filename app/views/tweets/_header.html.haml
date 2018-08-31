@@ -27,11 +27,13 @@
         %label.fab.fa-sistrix
           = submit_tag "Search", class: "search"
     %li.header-right--icon
-      %dl#accordion
-        %dt
-          %a{href: "#"} icon
-        %dd
-          = link_to "マイページ", user_path(current_user.id)
+      - if current_user.avatar?
+        = link_to image_tag(current_user.avatar.url), user_path(current_user.id)
+      / %dl#accordion
+      /   %dt
+      /     %a{href: "#"}
+      /   %dd
+      /     = link_to "マイページ", user_path(current_user.id)
 
     %li.header-right--post
       = link_to "ツイート", new_tweet_path
