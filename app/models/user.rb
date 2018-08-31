@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :like_tweets, through: :likes, source: :tweet
   has_many :comments
   mount_uploader :image, ImageUploader
+  mount_uploader :avatar, ImageUploader
 end
