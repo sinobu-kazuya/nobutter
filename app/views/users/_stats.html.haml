@@ -1,0 +1,9 @@
+.stats
+  %a{:href => "#{following_user_path(@user)}"}
+    %strong#following.stat
+      following
+      = @user.followings.count
+  %a{:href => "#{followers_user_path(@user)}"}
+    %strong#followers.stat
+      followers
+      = @user.followers.count

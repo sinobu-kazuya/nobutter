@@ -8,9 +8,15 @@
         = link_to "ツイート数", user_path(current_user.id)
         = current_user.tweets.count
       %li.mypage-list__follow
-        follow
+        %a{:href => "#{following_user_path(@user)}"}
+          %strong#following.stat
+            following
+            = @user.followings.count
       %li.mypage-list__follower
-        follower
+        %a{:href => "#{followers_user_path(@user)}"}
+          %strong#followers.stat
+            followers
+            = @user.followers.count
       %li.mypage-list__likes
         likes
         = current_user.likes.count

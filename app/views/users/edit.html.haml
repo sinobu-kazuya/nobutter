@@ -3,7 +3,7 @@
   .user_edit
     = form_for(@user) do |f|
       .user_edit-image
-        現在のヘッダー画像
+        <現在のヘッダー画像>
         - if @user.image?
           = image_tag @user.image.url
         - else
@@ -11,7 +11,7 @@
         = f.file_field :image
         = f.hidden_field :user_id, value: current_user.id
       .user_edit-avatar
-        現在のユーザーアイコン
+        <現在のユーザーアイコン>
         - if @user.avatar?
           = image_tag @user.avatar.url
         - else

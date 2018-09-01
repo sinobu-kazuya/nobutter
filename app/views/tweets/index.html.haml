@@ -22,9 +22,9 @@
             = link_to "ツイート数", user_path(current_user.id)
             = current_user.tweets.count
           %li.left-contents_list_follow
-            follow
+            フォロー
           %li.left-contents_list_follower
-            follower
+            フォロワー
     .left-content-down
   = render partial: 'center-content', locals: { tweets: @tweets }
   .right-content
